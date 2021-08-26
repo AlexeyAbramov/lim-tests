@@ -534,6 +534,7 @@ main {
 
 .results {
   margin-top: 50px;
+  padding-bottom: 50px;
 }
 .results__inner {
   padding: 28px 25px 62px;
