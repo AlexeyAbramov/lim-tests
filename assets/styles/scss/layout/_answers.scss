@@ -1,5 +1,10 @@
 .answers {
+  display: none;
+  &.show{
+    display: block;
+  }
   margin-top: 56px;
+  padding-bottom: 57px; 
   &__list {
     counter-reset: counter;
     max-width: 600px;
@@ -50,7 +55,7 @@
           }
         }
         &_correct {
-          margin-top: 25px;
+          padding-top: 25px;
         }
         .title {
           font-weight: bold;

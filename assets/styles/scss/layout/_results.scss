@@ -1,5 +1,5 @@
 .results {
-  margin-top: 98px;
+  margin-top: 50px;
   &__inner {
     padding: 28px 25px 62px;
     background-color: $white;
@@ -40,6 +40,7 @@
 
         height: 6px;
         border-radius: 25px;
+        background-color: $white--10;
         &_correct {
           background-color: $turquoise--20;
         }
@@ -57,7 +58,16 @@
       margin-top: 60px;
     }
     .award-top {
-      @include df;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+        "icon text"
+        "icon button";
+      gap: 0px 43px;
+      &__left {
+        grid-area: icon;
+      }
     }
     .award-right {
       display: flex;
@@ -65,21 +75,33 @@
       justify-content: space-between;
       min-height: 144px;
       margin-left: 43px;
-      .knowledge {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 21px;
-        &__result {
+      &__knowledge {
+        &.knowledge {
+          grid-area: text;
           font-weight: 500;
           font-size: 18px;
           line-height: 21px;
+          .knowledge {
+            &__text {
+              margin-top: 10px;
+            }
+            &__result {
+              font-weight: 500;
+              font-size: 18px;
+              line-height: 21px;
+            }
+            &__level {
+              margin-left: 23px;
+            }
+            &__status {
+              color: $orange--10;
+            }
+          }
         }
-        &__level {
-          margin-left: 23px;
-        }
-        &__status {
-          color: $orange--10;
-        }
+      }
+      &__start {
+        grid-area: button;
+        margin-top: auto;
       }
     }
     .body-award {
@@ -90,7 +112,7 @@
       &__text {
         margin-top: 20px;
       }
-      &__link {
+      &__wrapper {
         margin-top: 30px;
       }
       &__results {

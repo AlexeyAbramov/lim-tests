@@ -1,0 +1,125 @@
+// 660px - 120px
+@media screen and (max-width: 1200px) {
+  //RESULTS
+  .results {
+    &__inner {
+      box-shadow: none;
+    }
+  }
+}
+// - 660px
+@media screen and (max-width: 700px) {
+  //RESULTS
+  .results {
+    .level {
+      &__title {
+        display: none;
+      }
+      .bars {
+        margin: 0;
+      }
+    }
+    .award {
+      .award {
+        &-top {
+          grid-template-areas:
+            "icon text"
+            "button button";
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto 1fr;
+          gap: 22px 18px;
+          &__left {
+            .left-top {
+              &__image {
+                width: 100px;
+                margin-left: auto;
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+        &-right {
+          &__knowledge {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &.knowledge {
+              .knowledge {
+                &__text {
+                  display: flex;
+                  flex-direction: column;
+                  margin-top: 0;
+                }
+                &__title {
+                  margin-top: 6px;
+                }
+                &__level {
+                  margin-left: 0;
+                  margin-top: 6px;
+                }
+              }
+            }
+          }
+          &__start {
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+  //ANSWERS
+  .answers {
+    max-width: none;
+    &__item + .answers__item {
+      margin-top: 25px;
+    }
+    .item {
+      &__status {
+        padding-top: 42px;
+      }
+      &::before {
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        font-size: 13.8462px;
+        line-height: 16px;
+        color: $gray--50;
+      }
+    }
+  }
+}
+// - 400px
+@media screen and (max-width: 450px) {
+  ._container {
+    max-width: 400px;
+    padding: 0 15px;
+  }
+  //RESULTS
+  .results {
+    &__title {
+      font-size: 16px;
+    }
+    .level {
+      &__title {
+        display: none;
+      }
+    }
+    .award {
+      .award {
+        &-top {
+          grid-template-columns: auto 1fr;
+          grid-template-rows: auto 1fr;
+          grid-template-areas:
+            "icon text"
+            "button button";
+          gap: 22px 18px;
+        }
+        &__body {
+          font-size: 14px;
+          line-height: 120%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+//ARTICLE
+.article {
+  margin-top: 65px;
+  padding-bottom: 30px;
+  &__inner {
+    display: flex;
+    align-items: flex-end;
+    gap: 125px;
+  }
+  &__left {
+    .italic {
+      font-style: italic;
+    }
+    .line {
+      height: 3px;
+      width: 70px;
+      background-color: $turquoise--20;
+      margin: 25px 0;
+      &_center {
+        margin: 25px auto;
+      }
+    }
+    .article {
+      &__title {
+        font-size: 20px;
+        font-weight: 500;
+      }
+      &__body {
+        color: $gray--50;
+      }
+    }
+    .body-article {
+      padding-bottom: 30px;
+      &__list {
+        margin: 25px 0;
+        counter-reset: counter;
+      }
+      &__item {
+        &::before {
+          content: "* * *";
+          color: $turquoise--20;
+          margin: 0 15px;
+        }
+      }
+      &__item + .body-article__item {
+        margin-top: 20px;
+      }
+    }
+    .author {
+      color: $gray--60;
+      &__fio{
+          margin-top: 5px;
+      }
+    }
+    .share {
+      color: $gray--60;
+      margin-top: 15px;
+    }
+  }
+  &__right {
+    width: 210px;
+    height: 445px;
+  }
+}
