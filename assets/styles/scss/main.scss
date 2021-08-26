@@ -1,0 +1,19 @@
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+@import 'base/normalize';
+@import 'base/typography';
+@import 'base/settings';
+
+@import 'components/buttons';
+@import 'components/menu';
+@import 'components/popup';
+@import 'components/slick';
+
+
+@import 'layout/header';
+@import 'layout/results';
+@import 'layout/answers';
+@import 'layout/footer';
+
+@import 'base/media';

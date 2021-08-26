@@ -1,0 +1,104 @@
+.results {
+  margin-top: 98px;
+  &__inner {
+    padding: 28px 25px 62px;
+    background-color: $white;
+    box-shadow: 0px 0px 13px rgba(54, 70, 126, 0.13);
+    border-radius: 5px;
+  }
+  &__title {
+    color: $blue--00;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .levels {
+    margin-top: 30px;
+    &__list {
+      display: flex;
+      align-items: center;
+      gap: 19px;
+    }
+    &__item {
+      flex: 0 1 25%;
+      text-align: center;
+    }
+    .level {
+      &__title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+      }
+    }
+    .bars {
+      display: flex;
+      align-items: center;
+      margin: 22px;
+      gap: 6px;
+      .bar {
+        flex: 0 1 33%;
+
+        height: 6px;
+        border-radius: 25px;
+        &_correct {
+          background-color: $turquoise--20;
+        }
+        &_incorrect {
+          background-color: $orange;
+        }
+      }
+    }
+  }
+  .award {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    &__wrapper {
+      margin-top: 60px;
+    }
+    .award-top {
+      @include df;
+    }
+    .award-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 144px;
+      margin-left: 43px;
+      .knowledge {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        &__result {
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 21px;
+        }
+        &__level {
+          margin-left: 23px;
+        }
+        &__status {
+          color: $orange--10;
+        }
+      }
+    }
+    .body-award {
+      font-size: 18px;
+      line-height: 21px;
+      margin-top: 30px;
+      color: $gray--00;
+      &__text {
+        margin-top: 20px;
+      }
+      &__link {
+        margin-top: 30px;
+      }
+      &__results {
+        color: $blue--00;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+      }
+    }
+  }
+}
