@@ -1,9 +1,23 @@
-// 660px - 120px
+//900 - 120px
 @media screen and (max-width: 1200px) {
   //RESULTS
   .results {
     &__inner {
       box-shadow: none;
+    }
+  }
+}
+// 660px - 900px
+@media screen and (max-width: 1200px) {
+  //TESTS
+  .tests {
+    &_light-blue {
+      .content {
+        &__wrapper {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
     }
   }
 }
@@ -88,12 +102,70 @@
       }
     }
   }
+  //ARTICLE
+  .article {
+    &__inner {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  //TESTS
+  .tests {
+    &_dark-blue {
+      .tests {
+        &__wrap {
+          border-radius: 0;
+        }
+        &__body {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto 1fr;
+          grid-template-areas:
+            "title"
+            "count"
+            "text"
+            "content"
+            "answers";
+        }
+        &__title,
+        &__text {
+          text-align: center;
+        }
+        &__content {
+          padding-bottom: 36px;
+        }
+        &__count {
+          padding-top: 25px;
+          padding-right: 0;
+          justify-content: center;
+
+          background-color: $blue--background;
+        }
+        &__answers {
+          margin-top: 25px;
+          margin-left: 0;
+          padding-right: 30px;
+          padding-left: 30px;
+        }
+      }
+    }
+    &_results {
+      .tests {
+        &__heading {
+          border-bottom: 0;
+          flex-direction: column;
+          padding-bottom: 0;
+        }
+        &__count {
+          margin-top: 32px;
+        }
+      }
+    }
+  }
 }
 // - 400px
 @media screen and (max-width: 450px) {
   ._container {
-    max-width: 400px;
-    padding: 0 15px;
+    max-width: 450px;
   }
   //RESULTS
   .results {
@@ -116,6 +188,68 @@
           gap: 22px 18px;
         }
         &__body {
+          font-size: 14px;
+          line-height: 120%;
+        }
+      }
+    }
+  }
+  //TESTS
+  .tests {
+    &__inner._container {
+      padding: 0;
+    }
+    &_light-blue {
+      .tests {
+        &._container {
+          padding: 0;
+        }
+        &__heading {
+          flex-direction: column;
+          gap: 18px 0;
+        }
+        &__title {
+          font-size: 15px;
+          line-height: 20px;
+        }
+      }
+      .content {
+        .variants {
+          &__item {
+            flex: 1 1 100%;
+          }
+        }
+        &__source {
+          width: 240px;
+        }
+      }
+    }
+    &_dark-blue {
+      .tests {
+        &__title {
+          font-size: 16px;
+          line-height: 19px;
+        }
+      }
+    }
+    &_results {
+      .tests {
+        &__body {
+          border-radius: 0;
+        }
+        &__title {
+          font-size: 16px;
+          line-height: 19px;
+        }
+        &__subtitle {
+          font-size: 16px;
+          line-height: 19px;
+        }
+        &__verdict {
+          font-size: 16px;
+          line-height: 130%;
+        }
+        &__about {
           font-size: 14px;
           line-height: 120%;
         }

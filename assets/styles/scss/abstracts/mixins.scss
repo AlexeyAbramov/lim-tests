@@ -3,7 +3,7 @@
   display: block;
   content: "";
 }
-@mixin df{
+@mixin df {
   display: flex;
   align-items: center;
 }
@@ -26,4 +26,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@mixin dfend {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
