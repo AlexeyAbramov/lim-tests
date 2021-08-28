@@ -162,7 +162,7 @@
       }
     }
     &_levels {
-      ._container{
+      ._container {
         padding: 0;
       }
       .tests {
@@ -193,6 +193,157 @@
             &__next {
               margin-top: 27px;
             }
+          }
+        }
+      }
+    }
+  }
+  //COMPLETED
+  .completed {
+    &__heading {
+      justify-content: center;
+      .heading-completed {
+        &__wrapper {
+          flex: 0 0 200px;
+        }
+      }
+    }
+    &__back {
+      display: none;
+    }
+    &__section {
+      padding-bottom: 0;
+      .section-completed {
+        &__list {
+          overflow: auto;
+          padding-bottom: 20px;
+        }
+        &__item {
+          margin: 0 6px;
+          &_current {
+            padding: 3.5px 6px;
+            border-radius: 18px;
+            background-color: $blue--background;
+            font-weight: 500;
+
+            color: $gray--00;
+          }
+        }
+      }
+    }
+    &__results {
+      justify-content: center;
+      .results-completed {
+        &__list {
+          flex-direction: column;
+          align-items: center;
+          &_achievement {
+            padding-bottom: 26px;
+          }
+        }
+        &__item {
+          padding: 12px 0;
+          & + .results-completed__item {
+            border-left: none;
+          }
+          &_achievement {
+            max-width: 140px;
+          }
+        }
+        &__line {
+          height: 1px;
+          width: 45px;
+          background-color: $blue--30;
+        }
+      }
+    }
+    &__buttons {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: none;
+      .buttons-completed {
+        &__repeat,
+        &__next,
+        &__autonext {
+          grid-area: auto;
+        }
+        &__next {
+          margin: 7px auto 0 auto;
+          max-width: 290px;
+          width: 100%;
+        }
+        &__repeat {
+          justify-content: center;
+        }
+        &__autonext {
+          text-align: center;
+          margin-top: 11px;
+        }
+      }
+      &.buttons-completed_premium {
+        justify-content: center;
+        .buttons-completed {
+          &__repeat {
+            display: none;
+          }
+          &__transparent {
+            display: none;
+          }
+        }
+        .button_premium {
+          width: 290px;
+        }
+      }
+    }
+  }
+  //CHAT
+  .chat {
+    &__body {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: none;
+      padding-left: 15px;
+    }
+    &__left,
+    &__author,
+    &__messages,
+    &__send {
+      grid-area: auto;
+    }
+    &__left {
+      padding: 25px 0;
+      .left-chat {
+        &__subtitle {
+          text-align: center;
+        }
+      }
+    }
+    &__author {
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      .author-chat {
+        &__avatar {
+          display: block;
+        }
+        &__name {
+          padding-left: 0;
+          margin-left: 6px;
+        }
+      }
+    }
+    &__messages {
+      padding: 13px 0 45px 0;
+      background-color: transparent;
+      .messages-chat {
+        &__item {
+          .admin-message {
+            &__avatar {
+              display: none;
+            }
+          }
+          &.user-message {
+            margin-left: 0;
           }
         }
       }
@@ -289,6 +440,58 @@
         &__about {
           font-size: 14px;
           line-height: 120%;
+        }
+      }
+    }
+  }
+  //COMPLETED
+  .completed {
+    &__section {
+      .section-completed {
+        &__item {
+          font-size: 13px;
+          line-height: 15px;
+        }
+      }
+    }
+    &__buttons {
+      .buttons-completed {
+        &__like {
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+    }
+    &__button_premium {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+  //CHAT
+  .chat {
+    ._container{
+      padding: 0;
+    }
+    &__body{
+      margin-right: 0;
+    }
+    &__send {
+      gap: 0 7px;
+      .send-chat {
+        &__textarea {
+          border: $textarea-border;
+          padding-top: 5px;
+          border-radius: 2px;
+        }
+        &__button {
+          width: 40px;
+          height: 40px;
+          &-text {
+            display: none;
+          }
+          &-image {
+            margin-left: 0;
+          }
         }
       }
     }

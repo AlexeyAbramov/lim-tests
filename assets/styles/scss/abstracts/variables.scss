@@ -4,27 +4,35 @@ $white: #fff;
 $white--10: #f1f1f1;
 $black: #000;
 $black--00: #333333;
+$black--10: #2c2c2c;
 $orange: #ff940d;
 $orange--10: #ff9900;
 $gray--00: #5c5c5c;
 $gray--40: #828d9f;
 $gray--50: #7b7b7b;
+$gray-55: #bdbdbd;
 $gray--60: #4f4f4f;
+$gray-65: #666;
+$gray--70: #99a5b1;
 $blue--00: #36467e;
 $blue--10: #3d4e67;
 $blue--20: #8b99ca;
+$blue--30: #b9d2ff;
+$blue--40: #e3e4eb;
 $turquoise: #21c3be;
 $turquoise--20: #00c3bc;
 
-//LINE
-$line--border: 1px solid #E3E4EB;
-
+//bodred
+$textarea-border: 1px solid #d3d5da;
+$line--border: 1px solid #e3e4eb;
+$line-blue--border: 1px solid #b9d2ff;
 //INPUT BORDER
 $input--border: #bdbdbd;
 //BACKGROUND
 $blue--background: #f7faff;
 $gray--background: #f4f4f4;
 $popup--background: #00000080;
+$modal-background: #f5f5f5;
 
 //BOX-SHADOW
 $header--boxshadow: 0px 0px 29px rgba(196, 210, 230, 0.42);

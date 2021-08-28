@@ -1,0 +1,202 @@
+//COMPLETED
+.completed {
+  padding-top: 15px;
+  padding-bottom: 30px;
+  &__line {
+    border-bottom: $line-blue--border;
+  }
+  .back-completed {
+    &__link {
+      display: flex;
+      align-items: center;
+    }
+    &__text {
+      margin-left: 13px;
+      color: $black--00;
+    }
+  }
+  &__section {
+    margin-top: 13px;
+    padding-bottom: 17px;
+    .section-completed {
+      &__list {
+        @include dfsb;
+      }
+      &__item {
+        @include dfsb;
+        color: $gray-55;
+        &_current {
+          color: $black--00;
+          font-weight: bold;
+        }
+        &_completed {
+          color: $turquoise--20;
+          & span {
+            margin-left: 7px;
+          }
+        }
+      }
+    }
+  }
+  &__body {
+    margin-top: 22px;
+  }
+  &__heading {
+    text-align: center;
+    @include dfsb;
+    .heading-completed {
+      &__text {
+        display: block;
+        margin-top: 8px;
+      }
+    }
+  }
+  &__results {
+    @include dfsb;
+    margin-top: 16px;
+    .results-completed {
+      &__achievement {
+        position: relative;
+        z-index: -1;
+        top: 14px;
+        left: calc(50% - 50px);
+      }
+      &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 410px;
+        width: 100%;
+        &_achievement {
+          gap: 12px;
+          max-width: 474px;
+        }
+      }
+      &__item {
+        flex: 0 1 33.33%;
+        text-align: center;
+        // WITH ACHIEVEMENT
+        &_achievement {
+          position: relative;
+        }
+      }
+      &__subtitle {
+        &_achievement {
+          background: $white;
+          box-shadow: 0px 0px 8px rgba(82, 80, 80, 0.15);
+          border-radius: 3px;
+          padding: 7px 10px;
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+      &__line {
+        width: 1px;
+        height: 46px;
+        background-color: $blue--30;
+      }
+      &__text {
+        color: $turquoise--20;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        margin-top: 17px;
+        display: block;
+      }
+    }
+    .balloon__wrapper {
+      flex: 0 0 165px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+  &__points {
+    display: flex;
+    justify-content: center;
+  }
+  &__buttons {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: 1fr 190px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "repeat next"
+      ". timer";
+    &.buttons-completed_premium {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      .premium {
+        color: $orange;
+      }
+      .buttons-completed {
+        &__transparent {
+          width: 110px;
+        }
+      }
+      .completed__button_premium {
+        .button_premium {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 16px;
+          height: 40px;
+          border: none;
+          color: $white;
+          background-color: $orange;
+          padding: 11px 21px;
+          border-radius: 5px;
+          cursor: pointer;
+          text-transform: uppercase;
+          margin: 26px auto 0 auto;
+        }
+      }
+    }
+    .buttons-completed {
+      &__repeat {
+        display: flex;
+        align-items: center;
+        grid-area: repeat;
+        .repeat-button {
+          &__text {
+            color: $gray--00;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 16px;
+            margin-left: 9px;
+            display: block;
+          }
+        }
+      }
+      &__next {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-area: next;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        height: 40px;
+        border: none;
+        color: $white;
+        background-color: $turquoise--20;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      &__arrow {
+        margin-left: 10px;
+      }
+      &__autonext {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: $gray--70;
+        grid-area: timer;
+        margin-top: 7px;
+      }
+    }
+  }
+}
