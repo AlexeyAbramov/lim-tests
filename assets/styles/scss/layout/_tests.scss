@@ -274,7 +274,7 @@
     }
   }
   &_levels {
-    margin: 300px 0;
+    margin: 50px 0;
     .tests {
       &__wrap {
         background: $white;
@@ -321,6 +321,7 @@
                   background-color: $turquoise--20;
                 }
                 &_current {
+                  background-color: $white;
                   border: 1px solid $turquoise--20;
                 }
               }
@@ -365,11 +366,14 @@
           &__next {
             @include dfend;
             margin-top: 90px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 130%;
             .next-test {
               &__text {
                 color: $turquoise--20;
               }
-              &__arrow{
+              &__arrow {
                 margin-left: 10px;
               }
             }

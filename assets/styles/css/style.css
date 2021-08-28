@@ -1051,7 +1051,7 @@ main {
   margin-top: 25px;
 }
 .tests_levels {
-  margin: 300px 0;
+  margin: 50px 0;
 }
 .tests_levels .tests__wrap {
   background: #fff;
@@ -1105,6 +1105,7 @@ main {
   background-color: #00c3bc;
 }
 .tests_levels .tests__status .status__item .bars .bar_current {
+  background-color: #fff;
   border: 1px solid #00c3bc;
 }
 .tests_levels .tests__content {
@@ -1144,6 +1145,9 @@ main {
   align-items: center;
   justify-content: flex-end;
   margin-top: 90px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
 }
 .tests_levels .tests__right .right-test__next .next-test__text {
   color: #00c3bc;
@@ -1236,6 +1240,7 @@ main {
   }
   .tests_dark-blue .tests__title, .tests_dark-blue .tests__text {
     text-align: center;
+    padding-left: 0;
   }
   .tests_dark-blue .tests__content {
     padding-bottom: 36px;
@@ -1259,6 +1264,28 @@ main {
   }
   .tests_results .tests__count {
     margin-top: 32px;
+  }
+  .tests_levels ._container {
+    padding: 0;
+  }
+  .tests_levels .tests__status .status__title {
+    display: none;
+  }
+  .tests_levels .tests__title {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .tests_levels .tests__subtitle {
+    text-align: center;
+  }
+  .tests_levels .tests__wrapper {
+    grid-template-columns: 1fr;
+  }
+  .tests_levels .tests__left.left-test {
+    background-color: transparent;
+  }
+  .tests_levels .tests__right .right-test__next {
+    margin-top: 27px;
   }
 }
 @media screen and (max-width: 450px) {

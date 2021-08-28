@@ -129,6 +129,7 @@
         &__title,
         &__text {
           text-align: center;
+          padding-left: 0;
         }
         &__content {
           padding-bottom: 36px;
@@ -157,6 +158,42 @@
         }
         &__count {
           margin-top: 32px;
+        }
+      }
+    }
+    &_levels {
+      ._container{
+        padding: 0;
+      }
+      .tests {
+        &__status {
+          .status {
+            &__title {
+              display: none;
+            }
+          }
+        }
+        &__title {
+          font-size: 16px;
+          line-height: 19px;
+        }
+        &__subtitle {
+          text-align: center;
+        }
+        &__wrapper {
+          grid-template-columns: 1fr;
+        }
+        &__left {
+          &.left-test {
+            background-color: transparent;
+          }
+        }
+        &__right {
+          .right-test {
+            &__next {
+              margin-top: 27px;
+            }
+          }
         }
       }
     }
