@@ -691,6 +691,9 @@ main {
   display: flex;
   align-items: center;
 }
+.answers__item .item__status__heading_correct {
+  margin-top: 25px;
+}
 .answers__item .item__status .icon {
   margin-left: 17px;
   width: 20;
@@ -707,9 +710,6 @@ main {
 }
 .answers__item .item__status .explanation__title {
   font-weight: bold;
-}
-.answers__item .item__status_correct {
-  padding-top: 25px;
 }
 .answers__item .item__status .title {
   font-weight: bold;
@@ -1657,6 +1657,12 @@ main {
   }
 }
 @media screen and (max-width: 700px) {
+  .results {
+    padding-bottom: 0;
+  }
+  .results__inner {
+    padding-bottom: 0;
+  }
   .results .level__title {
     display: none;
   }
@@ -1697,6 +1703,7 @@ main {
 
   .answers {
     max-width: none;
+    margin-top: 37px;
   }
   .answers__item + .answers__item {
     margin-top: 25px;
@@ -1918,6 +1925,23 @@ main {
   .results .award .award__body {
     font-size: 14px;
     line-height: 120%;
+  }
+
+  .answers__inner._container {
+    padding: 0 15px;
+  }
+  .answers__item .item__status .answer__text {
+    font-size: 18px;
+    line-height: 130%;
+  }
+  .answers__item .item__status__heading {
+    justify-content: space-between;
+  }
+  .answers__item .item__status_correct {
+    padding-top: 12px;
+  }
+  .answers__item .item__status_correct .item__status__heading {
+    margin-top: 25px;
   }
 
   .tests__inner._container {

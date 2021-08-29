@@ -25,6 +25,10 @@
 @media screen and (max-width: 700px) {
   //RESULTS
   .results {
+    padding-bottom: 0;
+    &__inner {
+      padding-bottom: 0;
+    }
     .level {
       &__title {
         display: none;
@@ -84,6 +88,7 @@
   //ANSWERS
   .answers {
     max-width: none;
+    margin-top: 37px;
     &__item + .answers__item {
       margin-top: 25px;
     }
@@ -349,9 +354,6 @@
       }
     }
   }
-  //rocket-popup
-  .rocket-popup {
-  }
 }
 // - 450px
 @media screen and (max-width: 450px) {
@@ -381,6 +383,39 @@
         &__body {
           font-size: 14px;
           line-height: 120%;
+        }
+      }
+    }
+  }
+  //ANSWERS
+  .answers {
+    &__inner {
+      &._container {
+        padding: 0 15px;
+      }
+    }
+    &__item {
+      .item {
+        &__status {
+          .answer {
+            &__text {
+              font-size: 18px;
+              line-height: 130%;
+            }
+          }
+          &__heading {
+            justify-content: space-between;
+          }
+          &_correct {
+            padding-top: 12px;
+            .item {
+              &__status {
+                &__heading {
+                  margin-top: 25px;
+                }
+              }
+            }
+          }
         }
       }
     }
