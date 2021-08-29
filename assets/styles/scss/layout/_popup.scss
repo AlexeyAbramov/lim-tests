@@ -1,0 +1,98 @@
+//POPUP
+.rocket-popup {
+  padding-top: 20px;
+  background-color: #e5e5e5;
+  &__body {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 50px;
+    &_discount {
+      .rocket-popup {
+        &__text {
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 28px;
+          margin-top: 15px;
+          &_premium {
+            color: $orange;
+          }
+        }
+      }
+    }
+    &_balloon{
+      .rocket-popup{
+        &__premium{
+          color: $orange;
+        }
+      }
+    }
+  }
+  &__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  &__image {
+    margin-bottom: -15px;
+    width: 100%;
+  }
+  &__heading {
+    text-align: center;
+    color: $blue--00;
+    padding: 31px 55px 0 55px;
+    background-color: $white;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+  }
+  &__text {
+    font-size: 20px;
+    line-height: 23px;
+    margin-top: 12px;
+  }
+  &__buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    padding: 40px 57px 30px 57px;
+    gap: 12px 30px;
+    background-color: $white;
+    .button-rocket {
+      &__premium,
+      &__beginner {
+        height: 50px;
+        border: none;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        cursor: pointer;
+      }
+      &__premium {
+        background-color: $orange;
+        color: $white;
+      }
+      &__beginner {
+        color: $orange;
+        border: 1px solid $orange;
+        background-color: $white;
+      }
+    }
+  }
+  &__socials {
+    display: flex;
+    justify-content: center;
+    background-color: $white;
+    padding-top: 38px;
+    padding-bottom: 45px;
+    .social-rocket {
+      &__list {
+        @include dfsb;
+        max-width: 140px;
+        width: 100%;
+      }
+    }
+  }
+}

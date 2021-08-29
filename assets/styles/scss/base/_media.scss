@@ -349,8 +349,11 @@
       }
     }
   }
+  //rocket-popup
+  .rocket-popup {
+  }
 }
-// - 400px
+// - 450px
 @media screen and (max-width: 450px) {
   ._container {
     max-width: 450px;
@@ -469,10 +472,10 @@
   }
   //CHAT
   .chat {
-    ._container{
+    ._container {
       padding: 0;
     }
-    &__body{
+    &__body {
       margin-right: 0;
     }
     &__send {
@@ -494,6 +497,69 @@
           }
         }
       }
+    }
+  }
+  //ROCKET-POPUP
+  .rocket-popup {
+    &__inner._container {
+      padding: 0;
+    }
+    &__body {
+      &_discount {
+        .rocket-popup {
+          &__text {
+            font-size: 14px;
+            line-height: 16px;
+          }
+        }
+      }
+      &_social {
+        .rocket-popup {
+          &__title {
+          }
+          &__text {
+            margin-top: 8px;
+            font-weight: bold;
+          }
+        }
+      }
+      &_balloon {
+        &_social {
+          .rocket-popup {
+            &__text {
+              font-weight: normal;
+            }
+          }
+        }
+      }
+    }
+    &__close {
+      top: -20px;
+    }
+    &__heading {
+      padding: 31px 15px 0 15px;
+    }
+    &__title {
+      font-size: 18px;
+      line-height: 21px;
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    &__buttons {
+      padding: 24px 15px 30px 15px;
+      .button-rocket {
+        &__premium,
+        &__beginner {
+          font-size: 16px;
+          line-height: 19px;
+        }
+      }
+    }
+    &__socials {
+      padding-top: 24px;
+      padding-bottom: 30px;
     }
   }
 }
