@@ -41,6 +41,9 @@
   &__body {
     margin-top: 22px;
   }
+  &-slide{
+    padding-bottom: 45px;
+  }
   &__heading {
     text-align: center;
     @include dfsb;
@@ -70,6 +73,15 @@
         &_achievement {
           gap: 12px;
           max-width: 474px;
+        }
+        &_progress {
+          justify-content: center;
+          max-width: none;
+          .results-completed {
+            &__item {
+              @include dfcenter;
+            }
+          }
         }
       }
       &__item {
@@ -110,10 +122,6 @@
       align-items: center;
       justify-content: flex-end;
     }
-  }
-  &__points {
-    display: flex;
-    justify-content: center;
   }
   &__buttons {
     margin-top: 22px;
@@ -197,6 +205,20 @@
         grid-area: timer;
         margin-top: 7px;
       }
+    }
+  }
+  [aria-hidden="true"] {
+    .heading-completed__left,
+    .heading-completed__right {
+      display: none;
+    }
+    .results-completed__balloon {
+      opacity: 0;
+    }
+  }
+  [aria-hidden="false"] {
+    .results-completed__balloon {
+      opacity: 1;
     }
   }
 }

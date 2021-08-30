@@ -532,6 +532,44 @@ main {
   display: flex;
 }
 
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+  column-gap: 40px;
+}
+
+.slick-slider {
+  position: relative;
+}
+
+.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 70px;
+  width: 100%;
+  position: absolute;
+  left: calc(50% - 35px);
+  bottom: 5px;
+}
+.slick-dots .slick-active button {
+  background-color: #ff940d;
+}
+
+.slick-dots li button {
+  font-size: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 13px;
+  height: 13px;
+  background-color: #e3e4eb;
+  border: none;
+  border-radius: 50%;
+}
+
 .results {
   margin-top: 50px;
   padding-bottom: 50px;
@@ -1199,6 +1237,9 @@ main {
 .completed__body {
   margin-top: 22px;
 }
+.completed-slide {
+  padding-bottom: 45px;
+}
 .completed__heading {
   text-align: center;
   display: flex;
@@ -1231,6 +1272,15 @@ main {
 .completed__results .results-completed__list_achievement {
   gap: 12px;
   max-width: 474px;
+}
+.completed__results .results-completed__list_progress {
+  justify-content: center;
+  max-width: none;
+}
+.completed__results .results-completed__list_progress .results-completed__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .completed__results .results-completed__item {
   flex: 0 1 33.33%;
@@ -1265,10 +1315,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-}
-.completed__points {
-  display: flex;
-  justify-content: center;
 }
 .completed__buttons {
   margin-top: 22px;
@@ -1343,6 +1389,16 @@ main {
   color: #99a5b1;
   grid-area: timer;
   margin-top: 7px;
+}
+.completed [aria-hidden=true] .heading-completed__left,
+.completed [aria-hidden=true] .heading-completed__right {
+  display: none;
+}
+.completed [aria-hidden=true] .results-completed__balloon {
+  opacity: 0;
+}
+.completed [aria-hidden=false] .results-completed__balloon {
+  opacity: 1;
 }
 
 .chat {
@@ -1433,6 +1489,22 @@ main {
   border-bottom-right-radius: 4px;
   grid-area: author;
 }
+.chat__author .popup__close {
+  font-size: 17px;
+  color: #000;
+  opacity: 0.3;
+  padding: 10px;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  position: absolute;
+}
+.chat__author .popup__close:hover {
+  opacity: 0.7;
+}
+.chat__author .author-chat {
+  position: relative;
+}
 .chat__author .author-chat__avatar {
   display: none;
 }
@@ -1480,6 +1552,9 @@ main {
 }
 .chat__messages .messages-chat__item .admin-message__image {
   margin-top: 13px;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
 }
 .chat__messages .messages-chat__item .admin-message__date {
   display: block;
@@ -1784,6 +1859,9 @@ main {
     margin-top: 27px;
   }
 
+  .completed__body._container {
+    padding: 0;
+  }
   .completed__heading {
     justify-content: center;
   }
@@ -1819,6 +1897,14 @@ main {
   }
   .completed__results .results-completed__list_achievement {
     padding-bottom: 26px;
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 41px;
+    min-width: 250px;
+  }
+  .completed__results .results-completed__list_achievement .results-completed__item_achievement:nth-child(1) {
+    order: 4;
   }
   .completed__results .results-completed__item {
     padding: 12px 0;
@@ -1846,6 +1932,7 @@ main {
     margin: 7px auto 0 auto;
     max-width: 290px;
     width: 100%;
+    padding: 0;
   }
   .completed__buttons .buttons-completed__repeat {
     justify-content: center;
@@ -1865,6 +1952,9 @@ main {
   }
   .completed__buttons.buttons-completed_premium .button_premium {
     width: 290px;
+  }
+  .completed .completed-slick .slick-track {
+    column-gap: 0px;
   }
 
   .chat__body {

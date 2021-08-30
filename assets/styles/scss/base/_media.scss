@@ -205,6 +205,11 @@
   }
   //COMPLETED
   .completed {
+    &__body {
+      &._container {
+        padding: 0;
+      }
+    }
     &__heading {
       justify-content: center;
       .heading-completed {
@@ -244,6 +249,18 @@
           align-items: center;
           &_achievement {
             padding-bottom: 26px;
+            flex-wrap: wrap-reverse;
+            flex-direction: row;
+            justify-content: center;
+            column-gap: 41px;
+            min-width: 250px;
+            .results-completed {
+              &__item {
+                &_achievement:nth-child(1) {
+                  order: 4;
+                }
+              }
+            }
           }
         }
         &__item {
@@ -276,6 +293,7 @@
           margin: 7px auto 0 auto;
           max-width: 290px;
           width: 100%;
+          padding: 0;
         }
         &__repeat {
           justify-content: center;
@@ -298,6 +316,11 @@
         .button_premium {
           width: 290px;
         }
+      }
+    }
+    .completed-slick {
+      .slick-track {
+        column-gap: 0px;
       }
     }
   }
