@@ -118,13 +118,19 @@
     }
   }
   &__messages {
-    overflow: auto;
     background-color: $white;
     border-radius: 4px;
     padding: 13px 15px 45px 15px;
     grid-area: messages;
     .messages-chat {
+      &__list {
+        overflow: auto;
+        max-height: 450px;
+      }
       &__item {
+        & + .messages-chat__item {
+          margin-top: 20px;
+        }
         &_admin {
           display: flex;
           align-items: flex-start;
@@ -171,7 +177,6 @@
         }
         &_user {
           margin-left: 38px;
-          margin-top: 19px;
         }
         .user-message {
           &__body {

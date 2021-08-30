@@ -1516,11 +1516,17 @@ main {
   padding-left: 15px;
 }
 .chat__messages {
-  overflow: auto;
   background-color: #fff;
   border-radius: 4px;
   padding: 13px 15px 45px 15px;
   grid-area: messages;
+}
+.chat__messages .messages-chat__list {
+  overflow: auto;
+  max-height: 450px;
+}
+.chat__messages .messages-chat__item + .messages-chat__item {
+  margin-top: 20px;
 }
 .chat__messages .messages-chat__item_admin {
   display: flex;
@@ -1565,7 +1571,6 @@ main {
 }
 .chat__messages .messages-chat__item_user {
   margin-left: 38px;
-  margin-top: 19px;
 }
 .chat__messages .messages-chat__item .user-message__body {
   padding: 12px 20px;
