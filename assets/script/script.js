@@ -8,9 +8,13 @@ $(document).ready(function () {
     dots: true,
     arrows: false,
     infinite: true,
-    // autoplay: true,
-    autoplaySpeed: 3000,  // swap slides in ms
+    autoplay: true,
+    autoplaySpeed: 3000, // swap slides in ms
     speed: 700, // swap speed
+    focusOnSelect: true,
+    swipe: false,
+    pauseOnFocus: false,
+    pauseOnHover: false,
   });
 });
 const textarea = document.getElementById("message");
