@@ -515,6 +515,20 @@
         }
       }
     }
+    &__heading {
+      .heading-completed {
+        &__wrapper {
+          margin: 0;
+        }
+        &__title {
+          font-size: 18px;
+          line-height: 21px;
+        }
+      }
+    }
+    &-main {
+      padding-bottom: 30px;
+    }
     &__buttons {
       .buttons-completed {
         &__like {
@@ -526,6 +540,36 @@
     &__button_premium {
       font-size: 14px;
       line-height: 16px;
+    }
+    &__results {
+      margin-top: 30px;
+      .results-completed {
+        &__list {
+          &_achievement {
+            column-gap: 10px;
+          }
+        }
+        &__item {
+          &_achievement {
+            flex: 0 0 140px;
+          }
+        }
+        &__achievement {
+          width: 58px;
+          left: calc(50% - 29px);
+        }
+        &__subtitle {
+          font-size: 14px;
+          line-height: 17px;
+          &_achievement {
+            font-size: 11px;
+            line-height: 13px;
+          }
+        }
+        &__text {
+          font-weight: normal;
+        }
+      }
     }
   }
   //CHAT

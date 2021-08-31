@@ -534,6 +534,8 @@ main {
 
 .slick-list {
   overflow: hidden;
+  max-width: 500px;
+  width: 100%;
 }
 
 .slick-track {
@@ -553,12 +555,21 @@ main {
   width: 100%;
   position: absolute;
   left: calc(50% - 35px);
-  bottom: 5px;
+  bottom: -63px;
 }
 .slick-dots .slick-active button {
   background-color: #ff940d;
 }
 
+@media screen and (max-width: 450px) {
+  .slick-dots {
+    bottom: -30px;
+  }
+
+  .slick-list {
+    max-width: 100vw;
+  }
+}
 .slick-dots li button {
   font-size: 0;
   text-indent: -9999px;
@@ -1209,6 +1220,13 @@ main {
   margin-left: 13px;
   color: #333333;
 }
+.completed-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 22px;
+  padding-bottom: 55px;
+}
 .completed__section {
   margin-top: 13px;
   padding-bottom: 17px;
@@ -1234,17 +1252,11 @@ main {
 .completed__section .section-completed__item_completed span {
   margin-left: 7px;
 }
-.completed__body {
-  margin-top: 22px;
-}
-.completed-slide {
-  padding-bottom: 45px;
-}
 .completed__heading {
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+}
+.completed__heading .heading-completed__wrapper {
+  margin-top: 30px;
 }
 .completed__heading .heading-completed__text {
   display: block;
@@ -1254,7 +1266,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 16px;
+  margin-top: 51px;
 }
 .completed__results .results-completed__achievement {
   position: relative;
@@ -2087,6 +2099,16 @@ main {
     font-size: 13px;
     line-height: 15px;
   }
+  .completed__heading .heading-completed__wrapper {
+    margin: 0;
+  }
+  .completed__heading .heading-completed__title {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .completed-main {
+    padding-bottom: 30px;
+  }
   .completed__buttons .buttons-completed__like {
     font-size: 14px;
     line-height: 16px;
@@ -2094,6 +2116,30 @@ main {
   .completed__button_premium {
     font-size: 14px;
     line-height: 16px;
+  }
+  .completed__results {
+    margin-top: 30px;
+  }
+  .completed__results .results-completed__list_achievement {
+    column-gap: 10px;
+  }
+  .completed__results .results-completed__item_achievement {
+    flex: 0 0 140px;
+  }
+  .completed__results .results-completed__achievement {
+    width: 58px;
+    left: calc(50% - 29px);
+  }
+  .completed__results .results-completed__subtitle {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .completed__results .results-completed__subtitle_achievement {
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .completed__results .results-completed__text {
+    font-weight: normal;
   }
 
   .chat ._container {

@@ -15,6 +15,13 @@
       color: $black--00;
     }
   }
+  &-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 22px;
+    padding-bottom: 55px;
+  }
   &__section {
     margin-top: 13px;
     padding-bottom: 17px;
@@ -38,16 +45,12 @@
       }
     }
   }
-  &__body {
-    margin-top: 22px;
-  }
-  &-slide{
-    padding-bottom: 45px;
-  }
   &__heading {
     text-align: center;
-    @include dfsb;
     .heading-completed {
+      &__wrapper{
+        margin-top: 30px;
+      }
       &__text {
         display: block;
         margin-top: 8px;
@@ -56,7 +59,7 @@
   }
   &__results {
     @include dfsb;
-    margin-top: 16px;
+    margin-top: 51px;
     .results-completed {
       &__achievement {
         position: relative;
