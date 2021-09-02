@@ -5,6 +5,9 @@
   &__line {
     border-bottom: $line-blue--border;
   }
+  &-slide{
+    padding-bottom: 20px;
+  }
   .back-completed {
     &__link {
       display: flex;
